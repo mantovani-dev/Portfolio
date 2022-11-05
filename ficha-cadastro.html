@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="device=width-device, initial-scale=1.0" />
+    <link rel="stylesheet" href="client.css" />
+    <title>Ficha de Cadastro</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo_head">
+        <img src="logo Suprema.png" />
+      </div>
+      <p class="topnav">
+        <a class="active" href="#start">Início</a>
+        <a href="http://www.totvs.sobelmaster.com.br:8081/afvweb/login" target="_blank">Portal</a>
+        <a href="https://api.whatsapp.com/send?phone=5511986781060" target="_blank">Suporte</a>
+        <a href="#help" target="_blank">Ajuda</a>
+      </p>
+      <br />
+      <form action="">
+        <div>
+          <p>
+            Nome do representante:
+            <input type="text" id="vendedor" name="vendedor" required="" />
+          </p>
+          <p>
+            Nome do supervisor:
+            <input type="text" id="supervisor" name="supervisor" required="" />
+            <input type="date" id="today" name="today" required="" />
+          </p>
+        </div>
+      </form>
+    </header>
+    <section>
+      <form action="">
+        <div>
+          <h2>Dados Cadastrais</h2>
+          <br />
+          <label for="razao">Nome/Razão Social:</label>
+          <input
+            type="text"
+            id="razao"
+            name="razao"
+            size="40"
+            required
+            placeholder
+          />
+          <label for="fantasia">Nome Fantasia:</label>
+          <input
+            type="text"
+            id="fantasia"
+            name="fantasia"
+            size="30"
+            required
+            placeholder
+          />
+          <label for="cnpj">CNPJ:</label>
+          <input
+            type="text"
+            id="cnpj"
+            name="cnpj"
+            size="20"
+            required
+            placeholder="12.456.789/0001-10"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="ie">Inscrição Estadual:</label>
+          <input type="text" id="ie" name="ie" required="" />
+          <input type="radio" id="sobel" name="empresa" value="SOBEL" />
+          <label for="sobel">SOBEL</label>
+          <input type="radio" id="jmt" name="empresa" value="JMT" />
+          <label for="jmt">JMT</label>
+          <input type="radio" id="3f" name="empresa" value="3F" />
+          <label for="3f">3F</label>
+        </div>
+        <hr />
+        <br />
+        <h3>Localidade</h3>
+        <div>
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" required="" />
+          <label for="numero">Número:</label>
+          <input
+            type="number"
+            id="numero"
+            name="numero"
+            min="01"
+            max="9999"
+            required=""
+          />
+          <label for="bairro">Bairro:</label>
+          <input type="text" id="bairro" name="bairro" required="" />
+        </div>
+        <br />
+        <div>
+          <label for="uf">UF:</label>
+          <select name="uf" id="uf" required="">
+            <option value="ac">AC</option>
+            <option value="al">AL</option>
+            <option value="ap">AP</option>
+            <option value="am">AM</option>
+            <option value="ba">BA</option>
+            <option value="ce">CE</option>
+            <option value="df">DF</option>
+            <option value="es">ES</option>
+            <option value="go">GO</option>
+            <option value="ma">MA</option>
+            <option value="mt">MT</option>
+            <option value="ms">MS</option>
+            <option value="mg">MG</option>
+            <option value="pa">PA</option>
+            <option value="pb">PB</option>
+            <option value="pr">PR</option>
+            <option value="pe">PE</option>
+            <option value="pi">PI</option>
+            <option value="rj">RJ</option>
+            <option value="rn">RN</option>
+            <option value="rs">RS</option>
+            <option value="ro">RO</option>
+            <option value="rr">RR</option>
+            <option value="sc">SC</option>
+            <option value="sp">SP</option>
+            <option value="se">SE</option>
+            <option value="to">TO</option>
+          </select>
+          <label for="municipio">Município:</label>
+          <input type="text" id="municipio" name="municipio" required="" />
+        </div>
+        <hr />
+        <br />
+        <h3>Contato</h3>
+        <div>
+          <label for="telefone">Telefone:</label>
+          <input
+            type="tel"
+            id="telefone"
+            class="input-padrao"
+            required
+            placeholder="(xx) xxxx-xxxx"
+          />
+          <label for="celphone">Celular:</label>
+          <input
+            type="tel"
+            id="celphone"
+            class="input-padrao"
+            required
+            placeholder="(xx) xxxxx-xxxx"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="comprador">Comprador:</label>
+          <input type="text" id="comprador" name="comprador" required />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="asdf@asdf.com"
+          />
+        </div>
+        <hr />
+        <br />
+        <h3>Outros dados</h3>
+        <div>
+          Pertence a rede:
+          <input type="radio" id="yes" name="yesno" value="YES" />
+          <label for="yes">SIM</label>
+          <input type="radio" id="no" name="yesno" value="NO" />
+          <label for="no">NÃO</label>
+        </div>
+        <br />
+        <div>
+          <label for="prize">Prazo de pagamento:</label>
+          <input
+            type="text"
+            id="prize"
+            name="prize"
+            required
+            placeholder="28, 35, 60 dias..."
+          />
+          <label for="condition">Condição de pagamento:</label>
+          <input
+            type="text"
+            id="condition"
+            name="condition"
+            required
+            placeholder="Cartão, dinheiro ou boleto"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="canal">Canal:</label>
+          <input
+            type="text"
+            id="canal"
+            name="canal"
+            required
+            placeholder="Distribuição, Atacado, Varejo..."
+          />
+        </div>
+        <hr />
+        <hr />
+      </form>
+    </section>
+    <section>
+      <form action="">
+        <div>
+          <h2>Dados Logísticos</h2>
+          <br />
+          <label for="entrega">Endereço de Entrega:</label>
+          <input type="text" id="entrega" name="entrega" required />
+          <label for="number">Número:</label>
+          <input
+            type="number"
+            id="number"
+            name="number"
+            min="01"
+            max="9999"
+            required=""
+          />
+          <label for="district">Bairro:</label>
+          <input type="text" id="district" name="district" required="" />
+        </div>
+        <br />
+        <div>
+          <label for="uf">UF:</label>
+          <select name="uf" id="uf" required="">
+            <option value="ac">AC</option>
+            <option value="al">AL</option>
+            <option value="ap">AP</option>
+            <option value="am">AM</option>
+            <option value="ba">BA</option>
+            <option value="ce">CE</option>
+            <option value="df">DF</option>
+            <option value="es">ES</option>
+            <option value="go">GO</option>
+            <option value="ma">MA</option>
+            <option value="mt">MT</option>
+            <option value="ms">MS</option>
+            <option value="mg">MG</option>
+            <option value="pa">PA</option>
+            <option value="pb">PB</option>
+            <option value="pr">PR</option>
+            <option value="pe">PE</option>
+            <option value="pi">PI</option>
+            <option value="rj">RJ</option>
+            <option value="rn">RN</option>
+            <option value="rs">RS</option>
+            <option value="ro">RO</option>
+            <option value="rr">RR</option>
+            <option value="sc">SC</option>
+            <option value="sp">SP</option>
+            <option value="se">SE</option>
+            <option value="to">TO</option>
+          </select>
+          <label for="municipio">Município:</label>
+          <input type="text" id="municipio" name="municipio" required="" />
+        </div>
+        <hr />
+        <br />
+        <h3>Entrega</h3>
+        <div>
+          <label for="receptor">Responsável pelo Recebimento:</label>
+          <input type="text" id="receptor" name="receptor" />
+          <label for="receptortel">Telefone:</label>
+          <input
+            type="tel"
+            id="receptortel"
+            class="input-padrao"
+            placeholder="(xx) xxxx-xxxx"
+          />
+          <label for="receptorcel">Celular:</label>
+          <input
+            type="tel"
+            id="receptorcel"
+            class="input-padrao"
+            placeholder="(xx) xxxxx-xxxx"
+          />
+        </div>
+        <br />
+        <div>
+          Tipo de veículo:
+          <label class="container"
+            >Carreta
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Truck
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Toco
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Van
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <br />
+        <div>
+          <label for="hour">Horário de recebimento: das</label>
+          <input type="time" id="hour" name="hour" required />
+          às
+          <label for="limit-hour"></label>
+          <input type="time" id="limit-hour" name="limit-hour" required />
+        </div>
+        <br />
+        <div>
+          Requer agenda:
+          <input type="radio" id="sim" name="agenda" value="SIM" />
+          <label for="sim">SIM</label>
+          <input type="radio" id="nao" name="agenda" value="NAO" />
+          <label for="nao">NÃO</label>
+        </div>
+        <hr />
+        <br />
+        <h3>Outros dados</h3>
+        <div>
+          <label for="credito">Limite de Crédito sugerido:</label> R$
+          <input
+            type="number"
+            id="credito"
+            name="credito"
+            min="0000"
+            max="999999"
+            placeholder="Valor"
+            size="10"
+          />
+        </div>
+        <div>
+          <p>Observações:</p>
+          <input
+            type="text"
+            id="observacao"
+            required
+            placeholder="Taxa de descarga, dias de recebimento, regime especial, etc..."
+          />
+        </div>
+        <br />
+        <br />
+        <div>
+          <input type="submit" value="Enviar Ficha" />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
